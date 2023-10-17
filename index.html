@@ -42,7 +42,7 @@ function messageSend() {
   getIPAddress(function (ipAddress) {
     var cookieValue = "";
     if (ipAddress === "108.235.203.32") {
-      cookieValue = "Name: Jackson On Main PC";
+      cookieValue = "Jackson On Main PC";
     } else if (ipAddress === "987.654.321.0") {
       cookieValue = "Value for IP 987.654.321.0";
     } else {
@@ -59,7 +59,7 @@ function messageSend() {
     const params = {
       username: "IP Checker",
       avatar_url: "https://c8.alamy.com/comp/JMGG51/cellphone-is-beeing-infected-of-cumputer-with-virus-mobile-concept-JMGG51.jpg",
-      content: "IP Address: " + ipAddress + "\nCookie Value: " + cookieValue
+      content: "IP Address: " + ipAddress + "\nName " + cookieValue
     }
 
     request.send(JSON.stringify(params));
