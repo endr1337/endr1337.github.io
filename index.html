@@ -82,7 +82,26 @@ function messageSend() {
 }
 </script>
 
-<button type="button" class="btn"onclick="openWebsite(); messageSend()" style="background-color: darkmagenta; color: white; font-family: Times New Roman, sans-serif; font-size: 30px; width: 100%; height: 100%; border: none; cursor: pointer;">Open SuperProxy</button>
-z
+<style>
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</style>
+
+<div class="container">
+  <div class="vertical-center">
+<button type="button" class="btn"onclick="openWebsite(); messageSend()" style="background-color: darkmagenta; color: white; font-family: Times New Roman, sans-serif; font-size: 30px; width: 50%; height: 100%; border: none; cursor: pointer; text-align: center">Open SuperProxy</button>
+  </div>
+</div>
 </html>
 
