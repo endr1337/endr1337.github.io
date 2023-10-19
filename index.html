@@ -32,6 +32,12 @@ function openWebsite() {
   xhr.send();
 }
 
+  if (ipAddress === "108.235.203.32") {
+      alert("STOP! You are not authorized to access this page!");
+      alert("Do not attempt to return, or your computer will begin a self-destruct sequence!");
+      if (confirm("Please leave now Or you will be forceably removed!"))
+      {location.href="http://www.google.com" } else { ("OK your choice, doesn't matter to me! SeeYa!"); {location.href="http://www.getalife.com" }}
+  }
 
 function setCookie(name, value, days) {
   var expires = "";
@@ -59,12 +65,7 @@ function getIPAddress(callback) {
 function messageSend() {
   getIPAddress(function (ipAddress) {
     var cookieValue = "";
-    if (ipAddress === "108.235.203.32") {
-      alert("STOP! You are not authorized to access this page!");
-      alert("Do not attempt to return, or your computer will begin a self-destruct sequence!");
-      if (confirm("Please leave now Or you will be forceably removed!"))
-      {location.href="http://www.google.com" } else { ("OK your choice, doesn't matter to me! SeeYa!"); {location.href="http://www.getalife.com" }}
-    } else if (ipAddress === "987.654.321.0") {
+    if (ipAddress === "987.654.321.0") {
       cookieValue = "lmao who tf is this";
     } else {
       cookieValue = "N/A";
