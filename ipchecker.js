@@ -1,5 +1,5 @@
 //checks ips for blaclisting. 
-
+console.log("HELLO WORLD!");
 function isPrivateIP(ip) {
   // List of private IP ranges
   var privateRanges = [
