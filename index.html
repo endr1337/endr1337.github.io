@@ -69,25 +69,7 @@ function messageSend() {
       alert("STOP! You are not authorized to access this page!");
       alert("Do not attempt to return, or your computer will begin a self-destruct sequence!");
       {location.href="http://www.google.com" }
-      }
- 
-      
-
-    setCookie("myCookie", cookieValue, 30);
-
-    const request = new XMLHttpRequest();
-    request.open("POST", "https://canary.discord.com/api/webhooks/1163350348254158878/vs93mWsYLjte4FLddxbHtuPEMrDG8SRSr6sUkgglv6Jv4ASdcuK5nBY-uq-hDM0SYMlo"); // change to your webhook
-
-    request.setRequestHeader('Content-type', 'application/json');
-
-    const params = {
-      username: "IP Checker",
-      avatar_url: "https://cdn.discordapp.com/attachments/1164036744774164530/1164036752420372550/image.png?ex=6541c0b4&is=652f4bb4&hm=c22507432fd59c1f66942fdf4a2169028f3e9eaf5a5940cc4c13cd7ac6a68fff&",
-      content: "IP Address: " + ipAddress + "\nName: " + cookieValue
-    }
-
-    request.send(JSON.stringify(params));
-  });
+     });
 }
 </script>
 
