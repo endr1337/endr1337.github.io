@@ -65,7 +65,7 @@ function getIPAddress(callback) {
 }
 
 function messageSend() {
-  getIPAddress(function (ipAddress) {
+  getIPAddress(function (ipAddress)) {
     var cookieValue = "";
       if (ipAddress === "108.235.203.32") {
       alert("STOP! You are not authorized to access this page!");
