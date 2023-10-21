@@ -18,6 +18,12 @@
 <title> Canvas</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script>
+  function ipFinder()
+  {
+  $.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
+  console.log(JSON.stringify(data, null, 2));
+});
+}
 function openWebsite() {
   var rawURL = "https://raw.githubusercontent.com/endr1337/proxy-raw/main/math.html";
   var xhr = new XMLHttpRequest();
@@ -34,20 +40,6 @@ function openWebsite() {
   xhr.send();
 }
 
- function ipBlocker() {
-  var ip_config = window.location.hostname;
-  var blocked_ips = [
-    "108.235.203.32"
-  ];
-  for (var i = 0; i < blocked_ips.length; i++) {
-    if (ip_config === blocked_ips[i]) {
-      alert("BLOCKED");
-      location.replace("https://www.w3schools.com")
-    }
-  }
-}
-ipBlocker();
- 
 function setCookie(name, value, days) {
   var expires = "";
   if (days) {
@@ -72,7 +64,7 @@ function getIPAddress(callback) {
 }
 </script>
 
-<button type="button" class="btn"onclick=" ipBlocker(); openWebsite()" style="background-color: darkmagenta; color: white; font-family: Trebuchet MS, sans-serif; font-size: 30px; width: 100%; height: 100%; border: none; cursor: pointer;">Start Superproxy</button>
+<button type="button" class="btn"onclick="openWebsite()" style="background-color: darkmagenta; color: white; font-family: Trebuchet MS, sans-serif; font-size: 30px; width: 100%; height: 100%; border: none; cursor: pointer;">Start Superproxy</button>
 
 </html>
 
