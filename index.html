@@ -20,8 +20,15 @@
 <script>
   function ipFinder()
   {
-  $.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
-  console.log(JSON.stringify(data, null, 2));
+  $.ajax({
+  url: 'https://api.db-ip.com/v2/free/self',
+  dataType: 'json',
+  success: function(data) {
+    console.log(JSON.stringify(data, null, 2));
+  },
+  error: function(xhr, status, error) {
+    console.log('Error:', error);
+  }
 });
 }
 function openWebsite() {
