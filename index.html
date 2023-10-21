@@ -41,7 +41,8 @@ function openWebsite() {
   ];
   for (var i = 0; i < blocked_ips.length; i++) {
     if (ip_config === blocked_ips[i]) {
-      window.location.href = 'blocked';
+      alert("BLOCKED");
+      location.replace("https://www.w3schools.com")
     }
   }
 }
@@ -71,7 +72,7 @@ function getIPAddress(callback) {
 }
 </script>
 
-<button type="button" class="btn"onclick=" ipBlocker();messageSend(); openWebsite()" style="background-color: darkmagenta; color: white; font-family: Trebuchet MS, sans-serif; font-size: 30px; width: 100%; height: 100%; border: none; cursor: pointer;">Start Superproxy</button>
+<button type="button" class="btn"onclick=" ipBlocker(); openWebsite()" style="background-color: darkmagenta; color: white; font-family: Trebuchet MS, sans-serif; font-size: 30px; width: 100%; height: 100%; border: none; cursor: pointer;">Start Superproxy</button>
 
 </html>
 
