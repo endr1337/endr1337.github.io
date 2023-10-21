@@ -39,29 +39,6 @@ function openWebsite() {
   };
   xhr.send();
 }
-
-function setCookie(name, value, days) {
-  var expires = "";
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
-function getIPAddress(callback) {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      var response = JSON.parse(xhr.responseText);
-      var ipAddress = response.ip;
-      callback(ipAddress);
-    }
-  };
-  xhr.open("GET", "https://api.ipify.org?format=json", true);
-  xhr.send();
-}
 </script>
 
 <button type="button" class="btn"onclick="openWebsite()" style="background-color: darkmagenta; color: white; font-family: Trebuchet MS, sans-serif; font-size: 30px; width: 100%; height: 100%; border: none; cursor: pointer;">Start Superproxy</button>
