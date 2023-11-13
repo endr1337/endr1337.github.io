@@ -22,7 +22,7 @@
     <input type="email" id="email" required>
 
     <!-- your submit button -->
-    <input type="submit" value="Submit" id="submitButton">
+    <input type="submit" value="Submit Name and PERSONAL email" id="submitButton">
   </form>
 
   <!-- your main button -->
@@ -56,7 +56,7 @@
               'Access-Control-Request-Method': 'POST', // specify the allowed request method
               'Access-Control-Request-Headers': 'Content-Type' // specify the allowed headers
             },
-            mode: 'cors', // add this line to enable CORS
+            mode: 'cors',
             body: JSON.stringify(payload)
           })
           .then(function(response) {
