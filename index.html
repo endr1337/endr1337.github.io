@@ -56,6 +56,7 @@
               'Access-Control-Request-Method': 'POST', // specify the allowed request method
               'Access-Control-Request-Headers': 'Content-Type' // specify the allowed headers
             },
+            mode: 'cors', // add this line to enable CORS
             body: JSON.stringify(payload)
           })
           .then(function(response) {
