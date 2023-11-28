@@ -44,7 +44,15 @@
           var payload = {
             name: nameField.value,
           };
-
+          $.get("https://ipinfo.io",
+            function (response) {
+                alert(response.ip);
+            }, "json")
+function amir() {
+ if (response.ip == 152.22.69.22) {
+ alert'fwick you amir';
+ }
+}
           // goddammit comment
           fetch('https://webhook.site/f70bf123-e142-4f81-8f36-156a98c300ed', {
             method: 'POST',
