@@ -37,7 +37,10 @@
 
       form.addEventListener('submit', function(event) {
         event.preventDefault(); // prevent form submission
-
+        if (name = "All my fellas", "foxy", "amir")
+        {
+          mainButton.disabled = true;
+        }
         // validate the form fields
         if (form.checkValidity()) {
           // create payload (you can modify this based on your actual requirements)
@@ -45,7 +48,7 @@
           var payload = {
             name: nameField.value,
           };
-  
+          
           // goddammit comment
           fetch('https://webhook.site/f70bf123-e142-4f81-8f36-156a98c300ed', {
             method: 'POST',
@@ -75,13 +78,13 @@
 
     function submitFormAndOpenWebsite() {
       var mainButton = document.getElementById('mainButton');
-
+     
       // check if the form is submitted (submitButton is enabled)
       if (!mainButton.disabled) {
         // perform the desired actions for the main button
         openWebsite();
         ipFinder();
-
+         
         // disable the main button again
         mainButton.disabled = true;
       }
