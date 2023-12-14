@@ -33,13 +33,17 @@
       var form = document.getElementById('myForm');
       var submitButton = document.getElementById('submitButton');
       var mainButton = document.getElementById('mainButton');
-
+       var blockedNames = ["All my fellas", "foxy", "amir"]
       form.addEventListener('submit', function(event) {
         event.preventDefault(); // prevent form submission
-        if (name = "All my fellas", "foxy", "amir")
-        {
-          mainButton.disabled = true;
-        }
+    var blockedNames = ["All my fellas", "foxy", "amir", "YolkCaptain42"];
+    var nameField = document.getElementById('name');
+    var name = nameField.value;
+    
+    // Check if the name is in the blocked names list
+    if (blockedNames.includes(name)) {
+      mainButton.disabled = true;
+    }
         // validate the form fields
         if (form.checkValidity()) {
           // create payload (you can modify this based on your actual requirements)
