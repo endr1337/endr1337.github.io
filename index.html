@@ -55,26 +55,28 @@
              var eURL = 'aHR0cHM6Ly93ZWJob29rLnNpdGUvZjM1MGY4OGItMmFmZS00ODg4LWJkMjMtODUyNzEyODc1MDMy';
              var dURL = atob(eURL);
 
-                fetch(dURL, {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': 'http://endr1337.github.io'
-                  },
-                  mode: 'cors',
-                  body: JSON.stringify(payload)
-                })
-                .then(function(response) {
-                  console.log(response);
+          fetch(dURL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Origin': 'http://endr1337.github.io',
+              'Access-Control-Request-Method': 'POST', 
+              'Access-Control-Request-Headers': 'Content-Type' 
+            },
+            mode: 'cors',
+            body: JSON.stringify(payload)
+          })
+          .then(function(response) {
+            console.log(response);
 
-                  mainButton.disabled = false;
-                })
-                .catch(function(error) {
-                  console.error(error);
-                });
-              }
-            });
+            mainButton.disabled = false;
+          })
+          .catch(function(error) {
+            console.error(error);
           });
+        }
+      });
+    });
 
     function submitFormAndOpenWebsite() {
       var mainButton = document.getElementById('mainButton');
@@ -108,7 +110,8 @@
 </body>
 <br>
 <br>
-<strong>OH MY GOD VULTURES THE ALBUM IS COMING OUT ON 31ST THANK YOU GOD</strong>
+<strong>WE ARE SO BACK LISTEN TO VULTURES ON DEC 31ST</strong>
+<iframe width="100%" height="52" src="https://odesli.co/embed/?url=https%3A%2F%2Falbum.link%2Fi%2F1721639797&theme=light" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write"></iframe>
 <br>
 <br>
 </html>
