@@ -1,25 +1,24 @@
 
-// Get the container element
-const container = document.getElementById('container');
-
-// Define the ASCII characters for the cube
-const cubeChars = [
-  '   +------+',
-  '  /      /|',
-  ' /      / |',
-  '+------+  +',
-  '|      | /',
-  '|      |/',
-  '+------+'
-];
-
 // Function to rotate the cube
+// Ensure container variable is not redeclared
+const container = document.getElementById('container') || document.createElement('div');
+
 function rotateCube() {
+    const cubeChars = [
+        '   +------+',
+        '  /      /|',
+        ' /      / |',
+        '+------+  +',
+        '|      | /',
+        '|      |/',
+        '+------+'
+    ];
 
-  cubeChars.unshift(cubeChars.pop());
+    cubeChars.unshift(cubeChars.pop());
 
-  container.innerText = cubeChars.join('\n');
+    container.innerText = cubeChars.join('\n');
 }
 
-// Call the rotateCube function every 100 milliseconds
 setInterval(rotateCube, 100);
+
+
