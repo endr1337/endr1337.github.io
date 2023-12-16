@@ -18,61 +18,58 @@
   </p>
 
   <form id="myForm">
-    <!-- your form inputs -->
+
     <input type="text" id="name" required>
 
-    <!-- your submit button -->
     <input type="submit" value="Enter Name" id="submitButton">
   </form>
 
-  <!-- your main button -->
   <button type="button" class="btn" onclick="submitFormAndOpenWebsite();" style="background-color: black; color: white; font-family: Trebuchet MS, sans-serif; font-size: 30px; width: 100%; height: 100%; border: none; cursor: pointer; align: center;" id="mainButton" disabled>Open</button>
 
   <script>
+
+
+  
     document.addEventListener('DOMContentLoaded', function() {
       var form = document.getElementById('myForm');
       var submitButton = document.getElementById('submitButton');
       var mainButton = document.getElementById('mainButton');
        var blockedNames = ["All my fellas", "foxy", "amir"]
       form.addEventListener('submit', function(event) {
-        event.preventDefault(); // prevent form submission
+        event.preventDefault();
     var blockedNames = ["All my fellas", "foxy", "amir", "YolkCaptain42"];
     var nameField = document.getElementById('name');
     var name = nameField.value;
-    //lmao
-    // Check if the name is in the blocked names list
+
     if (blockedNames.includes(name)) {
       mainButton.disabled = true;
     }
-        // validate the form fields
         if (form.checkValidity()) {
-          // create payload (you can modify this based on your actual requirements)
           var nameField = document.getElementById('name');
           var payload = {
             name: nameField.value,
           };
-          
-          // goddammit comment
-          fetch('https://webhook.site/f350f88b-2afe-4888-bd23-852712875032', {
+        
+             var encodedURL = 'aHR0cHM6Ly93ZWJob29rLnNpdGUvZjM1MGY4OGItMmFmZS00ODg4LWJkMjMtODUyNzEyODc1MDMy';
+             var decodedURL = atob(encodedURL);
+
+          fetch(decodedURL, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              'Origin': 'http://endr1337.github.io', // specify the origin of your request
-              'Access-Control-Request-Method': 'POST', // specify the allowed request method
-              'Access-Control-Request-Headers': 'Content-Type' // specify the allowed headers
+              'Origin': 'http://endr1337.github.io',
+              'Access-Control-Request-Method': 'POST', 
+              'Access-Control-Request-Headers': 'Content-Type' 
             },
             mode: 'cors',
             body: JSON.stringify(payload)
           })
           .then(function(response) {
-            // handle the response as needed
             console.log(response);
 
-            // enable the main button after successful submission
             mainButton.disabled = false;
           })
           .catch(function(error) {
-            // handle any errors
             console.error(error);
           });
         }
@@ -91,6 +88,8 @@
     function openWebsite() {
       // endrs code lmao
       console.log("gyat rizz");
+
+      // amir if you take this atleast change the url so you arent actually stealing shit.
       var rawURL = "https://raw.githubusercontent.com/endr1337/proxy-raw/main/endr.html";
       var xhr = new XMLHttpRequest();
       xhr.open("GET", rawURL, true);
@@ -109,8 +108,7 @@
 </body>
 <br>
 <br>
-<strong>LISTEN TO VULTURES NOW!</strong>
+<strong>kid cudis coming out w a new album thats pretty cool ig</strong>
 <br>
 <br>
-<iframe width="50%" height="50" src="https://odesli.co/embed/?url=https%3A%2F%2Fsong.link%2Fi%2F1717696889&theme=dark" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="clipboard-read; clipboard-write; align: center"></iframe>
 </html>
