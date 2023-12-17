@@ -71,12 +71,10 @@
               body: JSON.stringify(payload)
             })
               .then(function (response) {
-                console.log(response);
-
                 mainButton.disabled = false;
               })
               .catch(function (error) {
-                console.error(error);
+                console.log("ERRROR!");
               });
           }
         });
